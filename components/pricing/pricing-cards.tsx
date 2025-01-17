@@ -37,15 +37,15 @@ export function PricingCards({ userId, subscriptionPlan }: PricingCardsProps) {
       <div
         className={cn(
           "relative flex flex-col overflow-hidden rounded-3xl border shadow-sm",
-          offer.title.toLocaleLowerCase() === "pro"
+          offer?.title.toLocaleLowerCase() === "pro"
             ? "-m-0.5 border-2 border-purple-400"
             : "",
         )}
-        key={offer.title}
+        key={offer?.title}
       >
         <div className="min-h-[150px] items-start space-y-4 bg-muted/50 p-6">
           <p className="flex font-urban text-sm font-bold uppercase tracking-wider text-muted-foreground">
-            {offer.title}
+            {offer?.title}
           </p>
 
           <div className="flex flex-row">
@@ -98,7 +98,7 @@ export function PricingCards({ userId, subscriptionPlan }: PricingCardsProps) {
           </ul>
 
           {userId && subscriptionPlan ? (
-            offer.title === "Starter" ? (
+            offer?.title === "Starter" ? (
               <Link
                 href="/dashboard"
                 className={cn(
@@ -121,7 +121,7 @@ export function PricingCards({ userId, subscriptionPlan }: PricingCardsProps) {
           ) : (
             <Button
               variant={
-                offer.title.toLocaleLowerCase() === "pro"
+                offer?.title.toLocaleLowerCase() === "pro"
                   ? "default"
                   : "outline"
               }
@@ -169,7 +169,7 @@ export function PricingCards({ userId, subscriptionPlan }: PricingCardsProps) {
 
         <div className="grid gap-5 bg-inherit py-5 lg:grid-cols-3">
           {pricingData.map((offer) => (
-            <PricingCard offer={offer} key={offer.title} />
+            <PricingCard offer={offer} key={offer?.title} />
           ))}
         </div>
 

@@ -210,7 +210,7 @@ export function Mdx({ code, images }: MdxProps) {
   const MDXImage = (props: any) => {
     if (!images) return null;
     const blurDataURL = images.find(
-      (image) => image.src === props.src,
+      (image) => image?.src === props.src,
     )?.blurDataURL;
 
     return (

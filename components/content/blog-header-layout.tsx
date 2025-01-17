@@ -41,7 +41,7 @@ export function BlogHeaderLayout() {
             {BLOG_CATEGORIES.map((category) => (
               <CategoryLink
                 key={category.slug}
-                title={category.title}
+                title={category?.title}
                 href={`/blog/category/${category.slug}`}
                 active={category.slug === slug}
               />
@@ -76,7 +76,7 @@ export function BlogHeaderLayout() {
               {BLOG_CATEGORIES.map((category) => (
                 <CategoryLink
                   key={category.slug}
-                  title={category.title}
+                  title={category?.title}
                   href={`/blog/category/${category.slug}`}
                   active={category.slug === slug}
                   clickAction={closeDrawer}

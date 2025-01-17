@@ -19,7 +19,7 @@ export default function InfoLanding({
       <MaxWidthWrapper className="grid gap-10 px-2.5 lg:grid-cols-2 lg:items-center lg:px-7">
         <div className={cn(reverse ? "lg:order-2" : "lg:order-1")}>
           <h2 className="font-heading text-2xl text-foreground md:text-4xl lg:text-[40px]">
-            {data.title}
+            {data?.title}
           </h2>
           <p className="mt-4 text-base text-muted-foreground">
             {data.description}
@@ -31,7 +31,7 @@ export default function InfoLanding({
                 <div className="relative pl-8" key={index}>
                   <dt className="font-semibold">
                     <Icon className="absolute left-0 top-1 size-5 stroke-purple-700" />
-                    <span>{item.title}</span>
+                    <span>{item?.title}</span>
                   </dt>
                   <dd className="text-sm text-muted-foreground">
                     {item.description}
@@ -50,8 +50,8 @@ export default function InfoLanding({
           <div className="aspect-video">
             <Image
               className="size-full object-cover object-center"
-              src={data.image}
-              alt={data.title}
+              src={data?.image}
+              alt={data?.title}
               width={1000}
               height={500}
               priority={true}

@@ -26,10 +26,10 @@ export function BlogCard({
           : "flex flex-col space-y-2",
       )}
     >
-      {data.image && (
+      {data?.image && (
         <div className="w-full overflow-hidden rounded-xl border">
           <BlurImage
-            alt={data.title}
+            alt={data?.title}
             blurDataURL={data.blurDataURL ?? placeholderBlurhash}
             className={cn(
               "size-full object-cover object-center",
@@ -39,7 +39,7 @@ export function BlogCard({
             height={400}
             priority={priority}
             placeholder="blur"
-            src={data.image}
+            src={data?.image}
             sizes="(max-width: 768px) 750px, 600px"
           />
         </div>
@@ -52,7 +52,7 @@ export function BlogCard({
       >
         <div className="w-full">
           <h2 className="my-1.5 line-clamp-2 font-heading text-2xl">
-            {data.title}
+            {data?.title}
           </h2>
           {data.description && (
             <p className="line-clamp-2 text-muted-foreground">

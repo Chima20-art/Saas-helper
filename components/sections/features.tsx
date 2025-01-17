@@ -24,7 +24,7 @@ export default function Features() {
               return (
                 <div
                   className="group relative overflow-hidden rounded-2xl border bg-background p-5 md:p-8"
-                  key={feature.title}
+                  key={feature?.title}
                 >
                   <div
                     aria-hidden="true"

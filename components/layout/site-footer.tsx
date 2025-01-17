@@ -13,18 +13,18 @@ export function SiteFooter({ className }: React.HTMLAttributes<HTMLElement>) {
     <footer className={cn("border-t", className)}>
       <div className="container grid max-w-6xl grid-cols-2 gap-6 py-14 md:grid-cols-5">
         {footerLinks.map((section) => (
-          <div key={section.title}>
+          <div key={section?.title}>
             <span className="text-sm font-medium text-foreground">
-              {section.title}
+              {section?.title}
             </span>
             <ul className="mt-4 list-inside space-y-3">
               {section.items?.map((link) => (
-                <li key={link.title}>
+                <li key={link?.title}>
                   <Link
                     href={link.href}
                     className="text-sm text-muted-foreground hover:text-primary"
                   >
-                    {link.title}
+                    {link?.title}
                   </Link>
                 </li>
               ))}

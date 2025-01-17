@@ -66,7 +66,7 @@ export function NavBar({ scroll = false }: NavBarProps) {
                     item.disabled && "cursor-not-allowed opacity-80",
                   )}
                 >
-                  {item.title}
+                  {item?.title}
                 </Link>
               ))}
             </nav>
